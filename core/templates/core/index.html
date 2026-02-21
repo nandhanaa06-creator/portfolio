@@ -1,0 +1,409 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nandhana TK | Python Fullstack Developer</title>
+    <meta name="description"
+        content="Portfolio of Nandhana TK, a Python Fullstack Developer specializing in Django, REST APIs, and modern web development.">
+    <link rel="stylesheet" href="{% static 'core/css/styles.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Space+Grotesk:wght@500;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- Custom cursor elements -->
+    <div class="cursor-dot" id="cursorDot"></div>
+    <div class="cursor-ring" id="cursorRing"></div>
+    <!-- Global particle canvas background -->
+    <canvas id="particles-canvas"></canvas>
+
+    <!-- ─── NAVBAR ─────────────────────────────────────────────── -->
+    <nav class="navbar" id="navbar">
+        <div class="logo">NTK<span class="dot">.</span></div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+    </nav>
+
+    <!-- ─── HERO ───────────────────────────────────────────────── -->
+    <header id="home" class="hero">
+        <div class="hero-bg-grid"></div>
+        <div class="hero-content">
+            <!-- Spinning gradient ring around profile -->
+            <div class="profile-ring-wrap hero-animate" style="animation-delay: 0s;">
+                <div class="profile-container">
+                    <img src="{% static 'core/images/profile1.jpeg' %}" alt="Nandhana TK" class="profile-img">
+                </div>
+                <div class="badge">Open to Work</div>
+            </div>
+            <h1 class="hero-animate" style="animation-delay: 0.2s;">Nandhana TK</h1>
+
+            <!-- Typewriter subtitle -->
+            <h2 class="hero-animate typewriter-wrap" style="animation-delay: 0.4s;">
+                <span id="typewriter"></span><span class="tw-cursor">|</span>
+            </h2>
+
+            <p class="hero-sub hero-animate" style="animation-delay: 0.6s;">Building robust and scalable web solutions
+                with Python, Django, and React.</p>
+
+            <div class="social-links hero-animate" style="animation-delay: 0.8s;">
+                <a href="https://github.com/nandhanaa06-creator" target="_blank" aria-label="GitHub"><i
+                        class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/nandhana-tk-326205390" target="_blank" aria-label="LinkedIn"><i
+                        class="fab fa-linkedin"></i></a>
+                <a href="mailto:nandhanaa06@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+            </div>
+
+            <!-- CTA Button -->
+            <div class="hero-cta hero-animate" style="animation-delay: 1s;">
+                <a href="#projects" class="btn cta-outline">
+                    <i class="fas fa-rocket"></i> Explore Projects
+                </a>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="scroll-dot"></div>
+        </div>
+    </header>
+
+    <!-- ─── ABOUT ──────────────────────────────────────────────── -->
+    <section id="about" class="section">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-single-col">
+                <div class="about-glass hidden-up">
+                    <div class="about-two-col-inner">
+                        <!-- LEFT: Text -->
+                        <div class="about-text-col">
+                            <span class="about-eyebrow">— Who I Am</span>
+                            <h3 class="about-heading">Passionate about crafting<br><span class="highlight">digital
+                                    experiences</span></h3>
+                            <p class="about-body">Passionate Python Full Stack Developer focused on building robust,
+                                scalable web solutions with Django and React. I bridge the gap between clean backend
+                                architecture and intuitive frontend design — dedicated to efficient systems and code
+                                that lasts.</p>
+                            <p class="about-body">From REST API design to real-time AI integrations, I bring full-cycle
+                                ownership to every project, delivering production-ready applications end-to-end.</p>
+                            <div class="about-stats">
+                                <div class="stat-item">
+                                    <span class="stat-num">8+</span>
+                                    <span class="stat-label">Projects Built</span>
+                                </div>
+                                <div class="stat-item">
+                                    <span class="stat-num">8+</span>
+                                    <span class="stat-label">Months Training</span>
+                                </div>
+                                <div class="stat-item">
+                                    <span class="stat-num">10+</span>
+                                    <span class="stat-label">Technologies</span>
+                                </div>
+                            </div>
+                            <a href="https://www.linkedin.com/in/nandhana-tk-326205390" target="_blank"
+                                class="btn linkedin-btn">
+                                <i class="fab fa-linkedin"></i> Connect on LinkedIn
+                            </a>
+                        </div>
+                        <!-- RIGHT: Glowing Tech Orb -->
+                        <div class="about-orb-col">
+                            <div class="tech-orb">
+                                <div class="orb-icons">
+                                    <i class="fab fa-python orb-icon" title="Python"></i>
+                                    <i class="fab fa-react orb-icon" title="React"></i>
+                                    <i class="fas fa-server orb-icon" title="Django"></i>
+                                    <i class="fab fa-js orb-icon" title="JavaScript"></i>
+                                    <i class="fas fa-database orb-icon" title="Database"></i>
+                                    <i class="fab fa-git-alt orb-icon" title="Git"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ─── SKILLS ─────────────────────────────────────────────── -->
+    <section id="skills" class="section">
+        <div class="container">
+            <h2 class="section-title">Technical Skills</h2>
+            <div class="skills-wrapper">
+                <div class="skill-category hidden-up">
+                    <h3><i class="fas fa-server skill-icon"></i> Backend Development</h3>
+                    <div class="skill-tags">
+                        <span class="d-tag"><i class="fab fa-python"></i> Python</span>
+                        <span class="d-tag"><i class="fas fa-server"></i> Django</span>
+                        <span class="d-tag"><i class="fas fa-network-wired"></i> REST APIs</span>
+                        <span class="d-tag"><i class="fas fa-database"></i> SQLite / MySQL</span>
+                    </div>
+                </div>
+                <div class="skill-category hidden-up" style="transition-delay: 0.1s;">
+                    <h3><i class="fas fa-paint-brush skill-icon"></i> Frontend Development</h3>
+                    <div class="skill-tags">
+                        <span class="tag"><i class="fab fa-react"></i> React.js</span>
+                        <span class="tag"><i class="fab fa-js"></i> JavaScript</span>
+                        <span class="tag"><i class="fab fa-html5"></i> HTML5</span>
+                        <span class="tag"><i class="fab fa-css3-alt"></i> CSS3</span>
+                        <span class="tag"><i class="fab fa-bootstrap"></i> Bootstrap</span>
+                    </div>
+                </div>
+                <div class="skill-category hidden-up" style="transition-delay: 0.2s;">
+                    <h3><i class="fas fa-tools skill-icon"></i> Tools &amp; Deployment</h3>
+                    <div class="skill-tags">
+                        <span class="tag"><i class="fab fa-git-alt"></i> Git &amp; GitHub</span>
+                        <span class="tag"><i class="fas fa-code"></i> VS Code</span>
+                        <span class="tag"><i class="fas fa-rocket"></i> Postman</span>
+                        <span class="tag"><i class="fas fa-cloud"></i> PythonAnywhere</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ─── PROJECTS ───────────────────────────────────────────── -->
+    <section id="projects" class="section">
+        <div class="container">
+            <h2 class="section-title">Featured Projects</h2>
+            <div class="projects-grid">
+
+                <!-- ── 1: CookSmart ── -->
+                <div class="project-card hidden-up">
+                    <div class="card-glow"></div>
+                    <div class="card-icon-wrap"><i class="fas fa-robot card-icon"></i></div>
+                    <div class="card-header">
+                        <h3>CookSmart</h3>
+                        <span class="project-type">AI Platform</span>
+                    </div>
+                    <p class="project-desc">AI-driven platform to eliminate food waste. Matches pantry ingredients to
+                        recipes and features a real-time AI Chef assistant.</p>
+                    <div class="tech-stack">
+                        <span class="tb-python">Python</span>
+                        <span class="tb-django">Django</span>
+                        <span class="tb-gemini">Gemini API</span>
+                        <span class="tb-db">PostgreSQL</span>
+                    </div>
+                    <div class="card-links">
+                        <a href="https://github.com/nandhanaa06-creator/cooksmart" target="_blank"
+                            class="btn-sm btn-github"><i class="fab fa-github"></i> View Code</a>
+                        <a href="https://nandhana.pythonanywhere.com/" target="_blank" class="btn-sm btn-demo"><i
+                                class="fas fa-external-link-alt"></i> Live Demo</a>
+                    </div>
+                </div>
+
+                <!-- ── 2: WearFashion ── -->
+                <div class="project-card hidden-up" style="transition-delay:0.05s;">
+                    <div class="card-glow"></div>
+                    <div class="card-icon-wrap"><i class="fas fa-shirt card-icon"></i></div>
+                    <div class="card-header">
+                        <h3>WearFashion</h3>
+                        <span class="project-type">E-Commerce</span>
+                    </div>
+                    <p class="project-desc">Full-stack fashion e-commerce application featuring user authentication,
+                        product catalogs, cart functionality, and an admin dashboard.</p>
+                    <div class="tech-stack">
+                        <span class="tb-python">Python</span>
+                        <span class="tb-django">Django</span>
+                        <span class="tb-html">HTML/CSS</span>
+                        <span class="tb-js">JS</span>
+                        <span class="tb-db">SQLite</span>
+                    </div>
+                    <div class="card-links">
+                        <a href="https://github.com/nandhanaa06-creator/wearfashion" target="_blank"
+                            class="btn-sm btn-github"><i class="fab fa-github"></i> View Code</a>
+                    </div>
+                </div>
+
+                <!-- ── 3: Inventory Management ── -->
+                <div class="project-card hidden-up" style="transition-delay:0.1s;">
+                    <div class="card-glow"></div>
+                    <div class="card-icon-wrap"><i class="fas fa-boxes-stacked card-icon"></i></div>
+                    <div class="card-header">
+                        <h3>Inventory Management</h3>
+                        <span class="project-type">Business Tool</span>
+                    </div>
+                    <p class="project-desc">Data-driven web application for streamlining stock tracking, supplier
+                        management, and sales workflows with automated low-stock alerts.</p>
+                    <div class="tech-stack">
+                        <span class="tb-python">Python</span>
+                        <span class="tb-django">Django</span>
+                        <span class="tb-js">JavaScript</span>
+                        <span class="tb-bootstrap">Bootstrap</span>
+                    </div>
+                    <div class="card-links">
+                        <a href="https://github.com/nandhanaa06-creator/inventory_management" target="_blank"
+                            class="btn-sm btn-github"><i class="fab fa-github"></i> View Code</a>
+                    </div>
+                </div>
+
+                <!-- ── 4: SmartSpend ── -->
+                <div class="project-card hidden-up" style="transition-delay:0.15s;">
+                    <div class="card-glow"></div>
+                    <div class="card-icon-wrap"><i class="fas fa-chart-pie card-icon"></i></div>
+                    <div class="card-header">
+                        <h3>SmartSpend</h3>
+                        <span class="project-type">Finance Tracker</span>
+                    </div>
+                    <p class="project-desc">Personal finance tool to track income and expenses. Includes data
+                        visualization, dark mode, and local storage data persistence.</p>
+                    <div class="tech-stack">
+                        <span class="tb-react">React.js</span>
+                        <span class="tb-js">JavaScript</span>
+                        <span class="tb-html">CSS</span>
+                        <span class="tb-local">LocalStorage</span>
+                    </div>
+                    <div class="card-links">
+                        <a href="https://github.com/nandhanaa06-creator/expense-tracker" target="_blank"
+                            class="btn-sm btn-github"><i class="fab fa-github"></i> View Code</a>
+                    </div>
+                </div>
+
+                <!-- ── 5: EduPlatform ── -->
+                <div class="project-card hidden-up" style="transition-delay:0.2s;">
+                    <div class="card-glow"></div>
+                    <div class="card-icon-wrap"><i class="fas fa-graduation-cap card-icon"></i></div>
+                    <div class="card-header">
+                        <h3>EduPlatform</h3>
+                        <span class="project-type">E-Learning</span>
+                    </div>
+                    <p class="project-desc">Educational platform featuring distinct student and admin portals. Includes
+                        custom logic linking video progression to quiz performance.</p>
+                    <div class="tech-stack">
+                        <span class="tb-python">Python</span>
+                        <span class="tb-django">Django</span>
+                        <span class="tb-js">JavaScript</span>
+                    </div>
+                    <div class="card-links">
+                        <a href="https://github.com/nandhanaa06-creator/learn" target="_blank"
+                            class="btn-sm btn-github"><i class="fab fa-github"></i> View Code</a>
+                    </div>
+                </div>
+
+                <!-- ── 6: Hospital Ward Management ── -->
+                <div class="project-card hidden-up" style="transition-delay:0.25s;">
+                    <div class="card-glow"></div>
+                    <div class="card-icon-wrap"><i class="fas fa-hospital card-icon"></i></div>
+                    <div class="card-header">
+                        <h3>Ward Management</h3>
+                        <span class="project-type">Healthcare</span>
+                    </div>
+                    <p class="project-desc">Administrative system designed to manage hospital ward capacities, patient
+                        allocations, and overall resource tracking.</p>
+                    <div class="tech-stack">
+                        <span class="tb-python">Python</span>
+                        <span class="tb-django">Django</span>
+                        <span class="tb-html">HTML/CSS</span>
+                    </div>
+                    <div class="card-links">
+                        <a href="https://github.com/nandhanaa06-creator/ward-management" target="_blank"
+                            class="btn-sm btn-github"><i class="fab fa-github"></i> View Code</a>
+                    </div>
+                </div>
+
+                <!-- ── 7: Defect Detector ── -->
+                <div class="project-card hidden-up" style="transition-delay:0.3s;">
+                    <div class="card-glow"></div>
+                    <div class="card-icon-wrap"><i class="fas fa-magnifying-glass card-icon"></i></div>
+                    <div class="card-header">
+                        <h3>Defect Detector</h3>
+                        <span class="project-type">QA Tool</span>
+                    </div>
+                    <p class="project-desc">Application designed to identify and track software or physical defects,
+                        focusing on quality assurance and accurate reporting.</p>
+                    <div class="tech-stack">
+                        <span class="tb-python">Python</span>
+                    </div>
+                    <div class="card-links">
+                        <a href="https://github.com/nandhanaa06-creator/defect_detecter" target="_blank"
+                            class="btn-sm btn-github"><i class="fab fa-github"></i> View Code</a>
+                    </div>
+                </div>
+
+                <!-- ── 8: Digital Hotel Menu ── -->
+                <div class="project-card hidden-up" style="transition-delay:0.35s;">
+                    <div class="card-glow"></div>
+                    <div class="card-icon-wrap"><i class="fas fa-utensils card-icon"></i></div>
+                    <div class="card-header">
+                        <h3>Digital Hotel Menu</h3>
+                        <span class="project-type">Hospitality</span>
+                    </div>
+                    <p class="project-desc">Digital menu management system allowing easy updates to restaurant
+                        offerings, categories, and pricing.</p>
+                    <div class="tech-stack">
+                        <span class="tb-python">Python</span>
+                        <span class="tb-django">Django</span>
+                    </div>
+                    <div class="card-links">
+                        <a href="https://github.com/nandhanaa06-creator/hotel_menu" target="_blank"
+                            class="btn-sm btn-github"><i class="fab fa-github"></i> View Code</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ─── EDUCATION ──────────────────────────────────────────── -->
+    <section id="education" class="section">
+        <div class="container">
+            <h2 class="section-title">Education &amp; Certifications</h2>
+            <div class="timeline">
+                <div class="timeline-item hidden-left">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">06/2025 - 01/2026</div>
+                    <div class="timeline-content">
+                        <h3>Python FullStack Developer</h3>
+                        <h4>Dsoft Technologies, Kadavanthra, Kochi</h4>
+                        <p>Intensive training in full-stack development, focusing on Django, REST APIs, and React.</p>
+                    </div>
+                </div>
+                <div class="timeline-item hidden-left" style="transition-delay: 0.2s;">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">2022 - 2025</div>
+                    <div class="timeline-content">
+                        <h3>Bachelor of Science in Physics</h3>
+                        <h4>SNDP YSS College, Perindhalmanna</h4>
+                        <p>Calicut University, Malappuram.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ─── FOOTER / CONTACT ───────────────────────────────────── -->
+    <footer id="contact">
+        <div class="container footer-content">
+            <h2>Let's Work Together</h2>
+            <p>I'm currently available for freelance work and full-time opportunities.</p>
+            <a href="mailto:nandhanaa06@gmail.com" class="btn primary-btn email-btn">nandhanaa06@gmail.com</a>
+
+            <div class="footer-socials">
+                <a href="https://github.com/nandhanaa06-creator" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/nandhana-tk-326205390" target="_blank"><i
+                        class="fab fa-linkedin"></i></a>
+            </div>
+            <p class="copyright">&copy; 2026 Nandhana TK. Built with <i class="fas fa-heart"></i> and Python code.</p>
+        </div>
+    </footer>
+
+    <!-- VanillaTilt for 3D card tilt -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js"></script>
+    <script src="{% static 'core/js/script.js' %}"></script>
+</body>
+
+</html>
